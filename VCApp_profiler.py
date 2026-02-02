@@ -82,33 +82,18 @@ st.markdown("""
   simulation using **SolidWorks**.
 """)
 
-# Add a section for publications
 st.header("Publications")
-uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
+st.markdown("""
+1. **Sigonde, V. C.**, Koueiou, X. T., & Alugongo, A. A. (2022).  
+   *Enhancing Fault Diagnosis of Gear Transmission Error Based on Experimental Analysis*.  
+   **2022 IEEE 13th International Conference on Mechanical and Intelligent Manufacturing Technologies (ICMIMT)**, 135–140.  
+   **DOI:** https://doi.org/10.1109/icmimt55556.2022.9845308
 
-if uploaded_file:
-    publications = pd.read_csv(uploaded_file)
-    st.dataframe(publications)
-
-    # Add filtering for year or keyword
-    keyword = st.text_input("Filter by keyword", "")
-    if keyword:
-        filtered = publications[
-            publications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
-        ]
-        st.write(f"Filtered Results for '{keyword}':")
-        st.dataframe(filtered)
-    else:
-        st.write("Showing all publications")
-
-# Add a section for visualizing publication trends
-st.header("Publication Trends")
-if uploaded_file:
-    if "Year" in publications.columns:
-        year_counts = publications["Year"].value_counts().sort_index()
-        st.bar_chart(year_counts)
-    else:
-        st.write("The CSV does not have a 'Year' column to visualize trends.")
+2. **Sigonde, V. C.**, Sozinando, D. F., Tchomeni, B. X., & Alugongo, A. A. (2025).  
+   *Coupled Nonlinear Dynamic Modeling and Experimental Investigation of Gear Transmission Error for Enhanced Fault Diagnosis in Single-Stage Spur Gear Systems*.  
+   **Dynamics**, 5, 37.  
+   **DOI:** https://doi.org/10.3390/dynamics5030037
+""")
 
 # Add a contact section
 st.header("Contact Information")
