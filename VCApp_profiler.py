@@ -38,9 +38,7 @@ st.write(f"**Field of Research:** {field}")
 st.write(f"**Institution:** {institution}")
 
 st.image(
-    "C:/Users/colle/OneDrive/Documentos/YEAR 2026/SUMMER CODING 2026/DAY 3/streamlit_files/streamlit_files/particles-7104407_1280.jpg",
-    caption="engineering (Pixabay)"
-)
+    "https://blog.prosig.com/wp-content/uploads/2023/08/prosigdjb_a_featured_image_for_a_blog_article_on_the_basics_of__df65895c-d563-4211-995f-56107ce47fe2.png")
 
 # add  ABOUT / RESEARCH IDENTITY  section
 st.header("Research Identity")
